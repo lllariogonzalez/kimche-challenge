@@ -4,7 +4,7 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard',
+    './node_modules/standard/eslintrc.json',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended'
