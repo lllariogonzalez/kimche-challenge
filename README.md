@@ -1,7 +1,7 @@
 # Desafío para Dev
 
-Nombre postulante: Mario Gonzalez
-Link a la app en producción: [LINK DEL DEPLOY]
+- Nombre postulante: Mario Gonzalez
+- Link a la app en producción: [rick-and-mortyl.vercel.app](https://rick-and-mortyl.vercel.app)
 
 ## Instrucciones
 
