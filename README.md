@@ -1,7 +1,7 @@
 # Desafío para Dev
 
-Nombre postulante: Mario Gonzalez
-Link a la app en producción: [LINK DEL DEPLOY]
+- Nombre postulante: Mario Gonzalez
+- Link a la app en producción: [rick-and-mortyl.vercel.app](https://rick-and-mortyl.vercel.app)
 
 ## Instrucciones
 
@@ -98,3 +98,4 @@ Este challenge es realizado con las siguientes tecnologías:
 - Se añade y configura **Tailwind CSS** como framework de utilidades CSS para estilizar la interfaz de usuario
 - Se configura **Eslint** con la convención "Standard" como herramienta de linting para mantener un código consistente
 - Se añade y configura **Husky** junto a **Conventional Commits** para configurar hooks de Git y ejecutar scripts automatizados, entre ellos controlar el estándar para mensajes de commit y comprobar el linting pre-commit.
+- Se añade y configura **GraphQL** y **ApolloClient** para manejar consultas y manipular datos desde una API GraphQL
