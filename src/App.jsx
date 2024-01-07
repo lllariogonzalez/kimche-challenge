@@ -4,28 +4,27 @@ import Loader from './components/Loader'
 import Header from './components/Header'
 import { useCharacters } from './characters/custom-hooks'
 import Error from './components/Error'
+import SearchBar from './components/SearchBar'
+import { useCallback, useEffect } from 'react'
 
 function App () {
-  const { data, error, loading } = useCharacters()
+  const [getCharacters, { data, error, loading }] = useCharacters()
 
-  if (error) {
-    return (
-      <Error>
-        {error.message}
-      </Error>
-    )
-  }
+  const handleSearch = useCallback((filter = '') => {
+    getCharacters({ variables: { page: 1, filter } })
+  }, [getCharacters])
+
+  useEffect(() => {
+    handleSearch()
+  }, [handleSearch])
 
   return (
-    <main className='flex flex-col items-center justify-center min-h-screen max-w-7xl m-auto p-8'>
-      {loading
-        ? <Loader />
-        : (
-          <>
-            <Header />
-            <Characters characters={data.characters.results} />
-          </>
-          )}
+    <main className='flex flex-col items-center justify-start min-h-screen max-w-7xl my-20 mx-5 lg:mx-auto gap-8'>
+      <Header />
+      <SearchBar onSearch={handleSearch} />
+      {loading && <Loader />}
+      {error && <Error>{error.message}</Error>}
+      {data && <Characters characters={data?.characters?.results} />}
     </main>
   )
 }
