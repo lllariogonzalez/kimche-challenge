@@ -5,6 +5,7 @@ export const FiltersContext = createContext()
 
 export function FiltersProvider ({ children }) {
   const [filters, setFilters] = useState({
+    page: 1,
     name: '',
     status: '',
     species: '',

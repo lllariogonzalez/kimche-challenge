@@ -7,13 +7,14 @@ import debounce from 'just-debounce-it'
 export function useCharacters () {
   const [getCharacters, { data, error, loading }] = useLazyQuery(GET_CHARACTERS)
   const characters = data?.characters?.results
+  const info = data?.characters?.info
 
   const { filters } = useContext(FiltersContext)
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceGetCharacters = useCallback(
     debounce((filters) => {
-      getCharacters({ variables: { page: 1, ...filters } })
+      getCharacters({ variables: { ...filters } })
     }, 300)
     , [getCharacters])
 
@@ -21,7 +22,7 @@ export function useCharacters () {
     debounceGetCharacters(filters)
   }, [debounceGetCharacters, filters])
 
-  return { characters, error, loading }
+  return { characters, info, error, loading }
 }
 
 export function useCharacter () {

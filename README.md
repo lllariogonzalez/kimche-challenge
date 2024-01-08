@@ -116,6 +116,12 @@ git clone https://github.com/lllariogonzalez/kimche-challenge
 npm install
 ```
 
+4. Crear un arhivo en la raiz del directorio `.env` para configurar variables de entorno
+
+```bash
+VITE_API_URL=https://rickandmortyapi.com/graphql
+```
+
 3. Ejecutar el proyecto en modo desarrollo
 
 ```bash
