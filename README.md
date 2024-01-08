@@ -99,3 +99,5 @@ Este challenge es realizado con las siguientes tecnologías:
 - Se configura **Eslint** con la convención "Standard" como herramienta de linting para mantener un código consistente
 - Se añade y configura **Husky** junto a **Conventional Commits** para configurar hooks de Git y ejecutar scripts automatizados, entre ellos controlar el estándar para mensajes de commit y comprobar el linting pre-commit.
 - Se añade y configura **GraphQL** y **ApolloClient** para manejar consultas y manipular datos desde una API GraphQL
+- Se usa y configura **context api** para evitar el prop drilling y hacer uso de un estado global para los filtros
+- Se añade **just-debounce-it** para optimizar las consultas a la api y mejorar la performance
