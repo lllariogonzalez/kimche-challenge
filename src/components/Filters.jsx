@@ -8,11 +8,12 @@ export default function Filters () {
 
   const handleSelectFilters = (event) => {
     const { name, value } = event.target
-    setFilters({ ...filters, [name]: value })
+    setFilters({ ...filters, [name]: value, page: 1 })
   }
 
   const handleReset = () => {
     setFilters({
+      page: 1,
       name: '',
       status: '',
       species: '',
@@ -52,7 +53,7 @@ export default function Filters () {
 
       <button
         onClick={handleReset}
-        className='font-bold w-full md:w-fit text-nowrap bg-white rounded-lg px-4 py-1 text-black'
+        className='font-bold w-full md:w-fit text-nowrap bg-white rounded-lg px-4 py-1 text-black hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out'
         aria-label='Reset filters'
       >
         Reset filters
