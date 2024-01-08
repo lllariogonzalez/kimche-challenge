@@ -17,3 +17,24 @@ query($page: Int, $name: String, $status: String, $species: String, $gender: Str
   }
 }
 `
+
+export const GET_CHARACTER = gql`
+query Character($id: ID!){
+  character(id: $id){
+  id
+  name
+  image
+  status
+  gender
+  species
+  type
+  location {
+    name
+  }
+  origin {
+    name
+    dimension
+  }
+}
+}
+`
