@@ -7,7 +7,7 @@ export default function SearchBar () {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    setFilters({ ...filters, name: filters.name })
+    setFilters({ ...filters, page: 1, name: filters.name })
   }
 
   const handleInputChange = (event) => {
@@ -26,7 +26,7 @@ export default function SearchBar () {
       />
       <button
         type='submit'
-        className='h-full bg-white text-black px-3 py-1 flex items-center justify-center'
+        className='h-full bg-white text-black px-3 py-1 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out'
         aria-label='Search characters'
       >
         <SearchIcon className='w-4 h-4' />
