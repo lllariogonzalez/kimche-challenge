@@ -101,3 +101,25 @@ Este challenge es realizado con las siguientes tecnologías:
 - Se añade y configura **GraphQL** y **ApolloClient** para manejar consultas y manipular datos desde una API GraphQL
 - Se usa y configura **context api** para evitar el prop drilling y hacer uso de un estado global para los filtros
 - Se añade **just-debounce-it** para optimizar las consultas a la api y mejorar la performance
+
+## Instalación
+
+1. Clonar este repositorio
+
+```bash
+git clone https://github.com/lllariogonzalez/kimche-challenge
+```
+
+2. Entrar al directorio del proyecto e instalar dependencias
+
+```bash
+npm install
+```
+
+3. Ejecutar el proyecto en modo desarrollo
+
+```bash
+npm run dev
+```
+
+4. Abrir [http://localhost:5173/](http://localhost:5173/) en el navegador
