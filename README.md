@@ -92,6 +92,12 @@ Este challenge es realizado con las siguientes tecnologías:
 - **GraphQL**
 - **ApolloClient**
 
+## Imágenes mobile y desktop
+
+![mobile layout](./imgs/mobile.webp)
+
+![desktop layout](./imgs/desktop.webp)
+
 ## Configuración
 
 - Se utiliza el template provisto **React + Vite**
@@ -101,6 +107,14 @@ Este challenge es realizado con las siguientes tecnologías:
 - Se añade y configura **GraphQL** y **ApolloClient** para manejar consultas y manipular datos desde una API GraphQL
 - Se usa y configura **context api** para evitar el prop drilling y hacer uso de un estado global para los filtros
 - Se añade **just-debounce-it** para optimizar las consultas a la api y mejorar la performance
+
+## Funcionalidades
+
+- [x] Página de Búsqueda
+- [x] Filtros
+- [x] Visualización de Detalles
+- [x] Utilizar GraphQL
+- [x] Paginación
 
 ## Instalación
 
