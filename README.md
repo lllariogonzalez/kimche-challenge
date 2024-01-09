@@ -107,6 +107,7 @@ Este challenge es realizado con las siguientes tecnologías:
 - Se añade y configura **GraphQL** y **ApolloClient** para manejar consultas y manipular datos desde una API GraphQL
 - Se usa y configura **context api** para evitar el prop drilling y hacer uso de un estado global para los filtros
 - Se añade **just-debounce-it** para optimizar las consultas a la api y mejorar la performance
+- Se añade y configura **cypress** para realizar test e2e de integración.
 
 ## Funcionalidades
 
@@ -143,3 +144,15 @@ npm run dev
 ```
 
 4. Abrir [http://localhost:5173/](http://localhost:5173/) en el navegador
+
+5. Realizar test e2e de integración, en otra terminal ejecutar el script
+
+```bash
+npm run test:e2e
+```
+
+para visualizarlo
+
+```bash
+npm run cypress:open
+```
