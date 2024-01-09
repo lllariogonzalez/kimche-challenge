@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import SearchIcon from '@/assets/SearchIcon'
+import SearchIcon from '@/components/Icons/SearchIcon'
 import { FiltersContext } from '@/context/FiltersContext'
 
 export default function SearchBar () {

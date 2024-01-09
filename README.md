@@ -94,9 +94,9 @@ Este challenge es realizado con las siguientes tecnologías:
 
 ## Imágenes mobile y desktop
 
-![mobile layout](./imgs/mobile.webp)
+![mobile layout](src/assets/mobile.webp)
 
-![desktop layout](./imgs/desktop.webp)
+![desktop layout](src/assets/desktop.webp)
 
 ## Configuración
 
