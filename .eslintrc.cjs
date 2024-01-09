@@ -7,13 +7,15 @@ module.exports = {
     './node_modules/standard/eslintrc.json',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
+    'plugin:cypress/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   overrides: [
     {
       env: {
-        node: true
+        node: true,
+        'cypress/globals': true,
       },
       files: [
         '.eslintrc.{js,cjs}'
@@ -42,7 +44,8 @@ module.exports = {
   plugins: [
     'react',
     'import',
-    'react-refresh'
+    'react-refresh',
+    'cypress'
   ],
   rules: {
     'react-refresh/only-export-components': [
