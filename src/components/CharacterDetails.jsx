@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useCharacter } from '../characters/custom-hooks'
 import Loader from './Loader'
 import Error from './Error'
-import CloseIcon from '../assets/CloseIcon'
+import CloseIcon from '@/components/Icons/CloseIcon'
 
 export default function CharacterDetails ({ id, onClick }) {
   const [getCharacter, { character, error, loading }] = useCharacter()
