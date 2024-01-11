@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { FiltersContext } from '../context/FiltersContext'
+import NextIcon from './Icons/NextIcon'
+import PrevIcon from './Icons/PrevIcon'
 
 export default function Pagination ({ info }) {
   const { filters, setFilters } = useContext(FiltersContext)
@@ -14,29 +16,32 @@ export default function Pagination ({ info }) {
 
   return (
     <>
-      <div className='flex gap-4 justify-center items-center'>
+      <div className='flex gap-1 justify-center items-center'>
 
-        {prev !== null &&
-          <button
-            className='bg-white text-black font-bold rounded px-3 cursor-pointer hover:bg-green-600 hover:text-white transition-all duration-200 ease-in-out'
-            onClick={() => handlePage(prev)}
-            disabled={prev === null}
-          >Prev
-          </button>}
+        <button
+          className={`${prev ? '' : 'invisible'} cursor-pointer hover:-translate-x-1 p-2 hover:text-white transition-all duration-200 ease-in-out`}
+          onClick={() => handlePage(prev)}
+          disabled={prev === null}
+          aria-label='Prev page'
+        >
+          <PrevIcon />
+        </button>
 
-        <span className='font-bold'>Page {filters.page} / {pages}</span>
+        <div>
+          <span className='font-bold'>Page {filters.page} / {pages}</span>
+          <p className='text-xs border-t border-white text-center'>{count} characters</p>
+        </div>
 
-        {next !== null &&
-          <button
-            className='bg-white text-black font-bold rounded px-3 cursor-pointer hover:bg-green-600 hover:text-white transition-all duration-200 ease-in-out'
-            onClick={() => handlePage(next)}
-            disabled={next === null}
-          >Next
-          </button>}
+        <button
+          className={`${next ? '' : 'invisible'} cursor-pointer hover:translate-x-1 p-2 hover:text-white transition-all duration-200 ease-in-out`}
+          onClick={() => handlePage(next)}
+          disabled={next === null}
+          aria-label='Next page'
+        >
+          <NextIcon />
+        </button>
 
       </div>
-
-      <p className=''>{count} characters</p>
     </>
   )
 }
