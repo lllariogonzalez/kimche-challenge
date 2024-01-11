@@ -18,7 +18,7 @@ export default function Pagination ({ info }) {
 
         {prev !== null &&
           <button
-            className='bg-white text-black font-bold rounded px-3 cursor-pointer hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out'
+            className='bg-white text-black font-bold rounded px-3 cursor-pointer hover:bg-green-600 hover:text-white transition-all duration-200 ease-in-out'
             onClick={() => handlePage(prev)}
             disabled={prev === null}
           >Prev
@@ -28,7 +28,7 @@ export default function Pagination ({ info }) {
 
         {next !== null &&
           <button
-            className='bg-white text-black font-bold rounded px-3 cursor-pointer hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out'
+            className='bg-white text-black font-bold rounded px-3 cursor-pointer hover:bg-green-600 hover:text-white transition-all duration-200 ease-in-out'
             onClick={() => handlePage(next)}
             disabled={next === null}
           >Next
