@@ -12,11 +12,11 @@ export default function SearchBar () {
 
   const handleInputChange = (event) => {
     const name = event.target.value
-    setFilters({ ...filters, name })
+    setFilters({ ...filters, page: 1, name })
   }
 
   return (
-    <form onSubmit={handleSubmit} className='flex w-full h-12 items-center border-2 border-gray-300 rounded-xl overflow-hidden'>
+    <form onSubmit={handleSubmit} className='flex w-full h-12 items-center border-2 border-gray-300 hover:border-green-400 rounded-xl overflow-hidden'>
       <input
         type='text'
         value={filters.name}
@@ -26,7 +26,7 @@ export default function SearchBar () {
       />
       <button
         type='submit'
-        className='h-full bg-white text-black px-3 py-1 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all duration-200 ease-in-out'
+        className='h-full bg-white text-black px-3 py-1 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all duration-200 ease-in-out'
         aria-label='Search characters'
       >
         <SearchIcon className='w-4 h-4' />

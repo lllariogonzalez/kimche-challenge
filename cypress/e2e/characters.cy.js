@@ -15,11 +15,11 @@ describe('Rick and Morty', () => {
   })
 
   it('user can go to next and prev page characters', () => {
-    cy.contains('Next').click()
+    cy.get('[aria-label="Next page"]').click()
     cy.contains('Aqua Morty')
     cy.contains('Page 2')
     cy.get('button').should('have.length', 4)
-    cy.contains('Prev').click()
+    cy.get('[aria-label="Prev page"]').click()
     cy.contains('Page 1')
     cy.contains('826 characters')
   })
