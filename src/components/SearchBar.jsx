@@ -12,7 +12,7 @@ export default function SearchBar () {
 
   const handleInputChange = (event) => {
     const name = event.target.value
-    setFilters({ ...filters, name })
+    setFilters({ ...filters, page: 1, name })
   }
 
   return (
